@@ -28,7 +28,7 @@ class Sennza_GroupCheevos {
 		add_action( 'plugins_loaded',         array( __CLASS__, 'check_requirements' ) );
 		add_action( 'bp_group_header_meta',   array( __CLASS__, 'print_group_achievements' ) );
 		add_action( 'dpa_unlock_achievement', array( __CLASS__, 'maybe_unlock_group_achievement' ), 10, 2 );
-		add_filter( 'cmb_meta_boxes',         array( __CLASS__, 'ts_group_bonus_metabox' ) );
+		add_filter( 'cmb_meta_boxes',         array( __CLASS__, 'register_metabox' ) );
 	}
 
 	public static function check_requirements() {
